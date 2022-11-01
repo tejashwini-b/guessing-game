@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: headFragment}">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Game</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Guess the Letter Game</h1>
+        <h3 th:text="${__${T(com.game.util.AttributeNames).MAIN_MESSAGE_L}__}">
+            Main Message Content</h3>
+        <h3 th:text="${__${T(com.game.util.AttributeNames).RESULT_MESSAGE_L}__}">
+            Result Message Content</h3>
+
+        <form th:action="@{__${T(com.game.util.GameMappings).PLAY_LETTER_GAME}__}"
+              action="play_letter_game" method="post">
+
+            <label for="letterGuess">Enter your guess</label>
+            <input id="letterGuess" type="text" name="letterGuess"/>
+            <input type="submit" value="Submit"/>
+        </form>
+        <footer th:replace="~{fragments/footer :: footer}">
+            <p>Created by Tejashwini</p>
+        </footer>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/head :: headFragment}">
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Title content</title>
+</head>
+<body>
+<div align="center">
+  <h1>Welcome to the Guessing Game</h1>
+  <h3>
+    <a th:href="@{__${T(com.game.util.GameMappings).PLAY_NUMBER_GAME}__}"
+       href="play_number_game.html">
+      Play Number Game
+    </a>
+  </h3>
+
+  <h3>
+    <a th:href="@{__${T(com.game.util.GameMappings).PLAY_LETTER_GAME}__}"
+       href="play_letter_game.html">
+      Play Letter Game
+    </a>
+  </h3>
+  <div th:replace="~{fragments/footer :: footer}">Footer goes here</div>
+</div>
+</body>
+
+</html>
